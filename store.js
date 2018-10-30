@@ -43,6 +43,7 @@ function openStore() {
                 if (res[0].stock >= quantity) {
                     console.log(chalk.green("Total: $" + quantity * res[0].price) + "\n No taxes were levied on this Purchase" + "\nFree Shipping" + "\nThank you for shopping with us")
                     let stockLess = res[0].stock - quantity
+                    console.log(stockLess+ "left")
                     checkout(id, stockLess)
                 } else {
                     console.log( chalk.red.bgWhite("I'M SORRY\n" + "We currently do not have the supply to fufill your order please select differnt quantity or check back later"))
